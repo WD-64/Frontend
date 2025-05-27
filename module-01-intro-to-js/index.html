@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Regular CSS below -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+    </style>
+
+    <!-- Tailwind CSS below -->
+    <style type="text/tailwindcss">
+      @theme {
+        --font-cursive: 'Cedarville Cursive', cursive;
+      }
+
+      /* Create your own classes */
+      @layer components {
+        .list-item {
+          @apply p-2 text-white font-bold hover:bg-orange-300 hover:text-black cursor-pointer;
+        }
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-orange-200 sm:max-md:bg-white font-cursive">
+    <header>
+      <nav>
+        <ul class="bg-orange-500 flex justify-around">
+          <li class="list-item">Home</li>
+          <li class="list-item">About</li>
+          <li class="list-item">Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="p-2 shadow-lg">
+      <h1 class="text-2xl font-bold">Tailwind</h1>
+      <p class="m-[27px]">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deserunt
+        eveniet eos, animi soluta perferendis distinctio obcaecati porro? Nobis,
+        porro.
+      </p>
+    </main>
+  </body>
+</html>
