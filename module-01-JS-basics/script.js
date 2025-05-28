@@ -199,7 +199,7 @@ const multNum = multiply(5, 6);
 // break & continue
 for (let i = 0; i < 10; i++) {
   if (i === 2) {
-    continue; // skip the rest or the loop body when i is 2
+    continue; // skip the rest of the loop body when i is 2
   }
   if (i === 5) {
     break;
