@@ -44,12 +44,13 @@ const slicedArray = names.slice(3, 5);
 const fruits = ['Apple', 'Banana', 'Orange', 'Kiwi'];
 fruits.splice(1, 2, 'Mango'); //Output: ['Apple', 'Mango', 'Kiwi]
 
-// .join()
+// .split() method on string
 const string = 'Hi my name is Anoj';
 const splitString = string.split(' ');
-// console.log(splitString); //Output: ['Hi', 'my', 'name', 'is', 'Anoj']
+console.log(splitString); //Output: ['Hi', 'my', 'name', 'is', 'Anoj']
 
-// console.log(splitString.join(' ')); //Output: 'Hi my name is Anoj'
+//.join() method on array joins all items in the array as a single string
+console.log(splitString.join(' ')); //Output: 'Hi my name is Anoj'
 
 // --------------------------------
 //LOOPS
