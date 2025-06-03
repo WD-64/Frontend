@@ -65,3 +65,17 @@ for (let i = 0; i < names.length; i++) {
 for (const studentName of names) {
   console.log(`Name: ${studentName.toUpperCase()}`);
 }
+
+//More examples of loops
+//What animals have 5 letters?
+const animals = ['lion', 'tiger', 'bear', 'giraffe', 'zebra', 'monkey'];
+
+const animalsWithFiveLetters = [];
+
+for (let i = 0; i < animals.length; i++) {
+  if (animals[i].length >= 5) {
+    animalsWithFiveLetters.push(animals[i]);
+  }
+}
+
+console.log(animalsWithFiveLetters);
