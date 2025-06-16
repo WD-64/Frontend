@@ -20,10 +20,13 @@ for (let i = 1; i <= 150; i++) {
       return response.json();
     })
     .then((data) => {
+      //Incase the pokeApi does not send info for a certain pokemon. We don't display anything.
+      //Eg: Imagine there was no pokemon under number 50, we just return and NOT call the displayPokemon func.
       if (!data) {
         return;
       }
-      displayPokemon(data);
+
+      displayPokemon(data); //We pass each pokemon data to this function.
     })
     .catch((err) => {
       console.log(err);
