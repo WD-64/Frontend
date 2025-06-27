@@ -1,7 +1,5 @@
 # Solution: The light bulb
 
-- Contains only the first two steps for now
-
 ### App.js
 
 ```js
@@ -11,10 +9,44 @@ import LightBulb from './components/LightBulb';
 
 const App = () => {
   const [isLightOn, setIsLightOn] = useState(false);
+  const [lightOnCounter, setLightOnCounter] = useState(0); //1
 
   const toggleLight = () => {
+    if (!isLightOn && lightOnCounter >= 10) {
+      alert(`You've reached the maximum count`);
+      return;
+    }
+
     setIsLightOn((prev) => !prev);
+
+    if (!isLightOn) {
+      setLightOnCounter((lightOnCounter) => lightOnCounter + 1);
+    }
   };
+
+  const resetCounter = () => {
+    setLightOnCounter(0);
+    setIsLightOn(false);
+  };
+
+  //Option one
+  // const buttonText =
+  //   lightOnCounter >= 10 && !isLightOn
+  //     ? 'Locked'
+  //     : isLightOn
+  //     ? 'Turn off'
+  //     : 'Turn on';
+
+  //Option two
+  let buttonText;
+
+  if (lightOnCounter >= 10 && !isLightOn) {
+    buttonText = 'Locked';
+  } else if (isLightOn) {
+    buttonText = 'Turn off';
+  } else {
+    buttonText = 'Turn on';
+  }
 
   return (
     <>
@@ -34,8 +66,13 @@ const App = () => {
         <button onClick={(prev) => !prev}}>Switch</button>
       */}
 
+      <button onClick={resetCounter}>Reset</button>
+
       {/* Below is how you pass props (information) from parent to child */}
       <LightBulb isLightOn={isLightOn} />
+      <div>
+        <h1>{lightOnCounter}</h1>
+      </div>
     </>
   );
 };
