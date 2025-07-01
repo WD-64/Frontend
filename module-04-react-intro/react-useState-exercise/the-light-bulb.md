@@ -1,6 +1,6 @@
 # Solution: The light bulb
 
-### App.js
+### App.jsx
 
 ```js
 import { useState } from 'react';

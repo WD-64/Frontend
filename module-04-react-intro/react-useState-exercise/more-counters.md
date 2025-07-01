@@ -1,6 +1,6 @@
 # Solution: More counters
 
-### App.js
+### App.jsx
 
 ```js
 import { useState } from 'react';
@@ -28,7 +28,7 @@ export default App;
 
 ---
 
-### Counter.js
+### Counter.jsx
 
 ```js
 const Counter = ({ count, setCount }) => {
