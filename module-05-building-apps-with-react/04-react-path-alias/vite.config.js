@@ -3,6 +3,8 @@ import { dirname, resolve } from 'path'; //Import this
 import { fileURLToPath } from 'url'; //Import this
 import react from '@vitejs/plugin-react';
 
+//Refer the README file for explanation
+
 const __filename = fileURLToPath(import.meta.url); //Add this
 const __dirname = dirname(__filename); //Add this
 
